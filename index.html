@@ -427,42 +427,41 @@
   }
 
   /* ── BETS ── */
-  .bets-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-    margin-top: 48px;
-  }
-  .bet {
-    padding: 24px;
+  .bets-list {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
     border: 1px solid var(--line);
-    border-radius: 10px;
+    border-radius: 12px;
+    overflow: hidden;
   }
-  .bet h3 {
-    font-size: 14px;
+  .bet-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 24px 28px;
+    border-bottom: 1px solid var(--line);
+    background: #fff;
+    transition: background 0.15s;
+  }
+  .bet-item:last-child { border-bottom: none; }
+  .bet-item:hover { background: var(--bg); }
+  .bet-n {
+    font-size: 11px;
+    font-weight: 800;
+    color: var(--blue);
+    letter-spacing: 1px;
+    min-width: 24px;
+    padding-top: 3px;
+    flex-shrink: 0;
+  }
+  .bet-item h3 {
+    font-size: 15px;
     font-weight: 700;
     color: var(--ink);
-    margin-bottom: 8px;
+    margin-bottom: 4px;
   }
-  .bet p { font-size: 14px; color: var(--muted); line-height: 1.55; }
-
-  .bets-pipeline {
-    margin-top: 24px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: var(--ink);
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid var(--ink);
-  }
-  .bp {
-    background: var(--ink);
-    padding: 24px 20px;
-    border-right: 1px solid rgba(255,255,255,0.08);
-  }
-  .bp:last-child { border-right: none; }
-  .bp p { font-size: 13.5px; color: rgba(255,255,255,0.7); line-height: 1.6; }
+  .bet-item p { font-size: 14px; color: var(--muted); line-height: 1.6; }
 
   /* ── FOOTER ── */
   footer {
@@ -661,26 +660,41 @@
     <p class="s-lead" style="margin-bottom:0;">Focus the roadmap on making the first model useful, standard, and editable.</p>
   </div>
 
-  <div class="bets-top">
-    <div class="bet">
-      <h3>AI-assisted modeling on the go</h3>
-      <p>A chat-based AI assistant interacts with the canvas directly in NGM, enabling other teams to build AI skills as well.</p>
+  <div class="bets-list">
+    <div class="bet-item">
+      <span class="bet-n">01</span>
+      <div>
+        <h3>AI-assisted modeling on the go</h3>
+        <p>A chat-based AI assistant interacts with the canvas directly in NGM, enabling other teams to build AI skills as well.</p>
+      </div>
     </div>
-    <div class="bet">
-      <h3>Improve accuracy continuously</h3>
-      <p>Improve LLM, architecture, and system prompt.</p>
+    <div class="bet-item">
+      <span class="bet-n">02</span>
+      <div>
+        <h3>Improve accuracy continuously</h3>
+        <p>Improve LLM, architecture, and system prompt.</p>
+      </div>
     </div>
-  </div>
-
-  <div class="bets-pipeline">
-    <div class="bp">
-      <p>Modeling assistant is accessible in the engagement layer — PCA, MCP, Joule.</p>
+    <div class="bet-item">
+      <span class="bet-n">03</span>
+      <div>
+        <h3>Modeling assistant in the engagement layer</h3>
+        <p>Accessible via PCA, MCP, and Joule.</p>
+      </div>
     </div>
-    <div class="bp">
-      <p>Context-aware process generation and modifications based on repository, dictionary, and modeling conventions.</p>
+    <div class="bet-item">
+      <span class="bet-n">04</span>
+      <div>
+        <h3>Context-aware process generation and modification</h3>
+        <p>Based on repository, dictionary, and modeling conventions.</p>
+      </div>
     </div>
-    <div class="bp">
-      <p>Generate context-aware process improvement recommendations based on SAP best practices, suite repository, and atoms — PCA analysis on top — and reflect on to-be processes.</p>
+    <div class="bet-item">
+      <span class="bet-n">05</span>
+      <div>
+        <h3>Context-aware process improvement recommendations</h3>
+        <p>Based on SAP best practices, suite repository, and atoms — PCA analysis on top — and reflected on to-be processes.</p>
+      </div>
     </div>
   </div>
 </section>
